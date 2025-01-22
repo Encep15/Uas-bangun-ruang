@@ -1,23 +1,35 @@
-public class BangunRuang {
-    private static final double PHI = 22.0 / 7.0;
+class Balok {
+	private double panjang;
+	private double lebar;
+	private double tinggi;
 
-    // Metode untuk menghitung luas permukaan balok
-    public double luasPermukaanBalok(double panjang, double lebar, double tinggi) {
-        return 2 * ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi));
-    }
+	public Balok(double panjang, double lebar, double tinggi){
+		this.panjang = panjang;
+		this.lebar = lebar;
+		this.tinggi = tinggi;
+	}
+	
+	public double hitungLuasPermukaan(){
+		return 2 * ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi));
+	}
 
-    // Metode untuk menghitung volume balok
-    public double volumeBalok(double panjang, double lebar, double tinggi) {
-        return panjang * lebar * tinggi;
-    }
+	public double hitungVolume(){
+		return panjang * lebar * tinggi;
+	}
+}
 
-    // Metode untuk menghitung luas permukaan bola
-    public double luasPermukaanBola(double diameter) {
-        return PHI * Math.pow(diameter, 2);
-    }
+class Bola {
+	private double diameter;
 
-    // Metode untuk menghitung volume bola
-    public double volumeBola(double diameter) {
-        return (PHI * Math.pow(diameter, 3)) / 6;
+	public Bola(double diameter){
+		this.diameter = diameter;
+	}
+	public double hitungLuasPermukaan() {
+		return Math.PI * Math.pow(diameter, 2);
+	}
+	
+	public double hitungVolume() {
+        return (Math.PI * Math.pow(diameter, 3)) / 6;
     }
 }
+
